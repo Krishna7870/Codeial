@@ -4,13 +4,15 @@ const port = 8000;
 
 
 
-
+//use express router(before the server start it has to go to this file)
+app.use('/', require('./routes/index'));
 
 app.listen(port, function(err){
 
     if(err){
         console.log('Error in running the server:', err);
+        
         return;
     }
-        console.log('server is running on port:', port);
+        console.log(`server is running on port: ${port}`);
 });
